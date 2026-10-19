@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marquee Example</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      background: #111;
+      color: #fff;
+      padding: 15px 0;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 18s linear infinite;
+    }
+
+    .marquee-track span {
+      margin-right: 80px;
+      font-size: 18px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <!-- Original Content -->
+      <span>🚀 Welcome to Our Website</span>
+      <span>🔥 50% OFF on All Products</span>
+      <span>📞 Contact: +91 98765 43210</span>
+      <span>💡 New Arrivals Available Now</span>
+
+      <!-- Duplicate Content for Infinite Loop -->
+      <span>🚀 Welcome to Our Website</span>
+      <span>🔥 50% OFF on All Products</span>
+      <span>📞 Contact: +91 98765 43210</span>
+      <span>💡 New Arrivals Available Now</span>
+    </div>
+  </div>
+
+</body>
+</html>
+
+.contact-section{
+    width:95%;
+    max-width:1300px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+}
